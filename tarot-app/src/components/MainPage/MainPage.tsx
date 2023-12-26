@@ -1,5 +1,10 @@
+import { Header } from "../Header/Header";
 import "./MainPage.css";
 
 export function MainPage() {
-  return <div>Popka</div>;
+  return (
+    <div className="main">
+      <Header></Header>
+    </div>
+  );
 }

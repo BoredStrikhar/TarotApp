@@ -13,7 +13,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<MainPage />} />
-            <Route path="/new" element={<Counter />} />
+            <Route path="/gadanie" element={<Counter />} />
           </Routes>
         </BrowserRouter>
       </Provider>
