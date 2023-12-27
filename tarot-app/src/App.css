@@ -1,9 +1,9 @@
 @font-face {
-    font-family: 'Montserrat-Regular';
-    src: local('Montserrat-Regular'), url(./assets/fonts/Montserrat-Regular.woff) format('woff');
+    font-family: "Montserrat-Regular";
+    src: local("Montserrat-Regular"), url(./assets/fonts/Montserrat-Regular.woff) format("woff");
 }
 
 @font-face {
-    font-family: 'Montserrat-Bold';
-    src: local('Montserrat-Bold'), url(./assets/fonts/Montserrat-ExtraBold.woff) format('woff');
+    font-family: "Montserrat-Bold";
+    src: local("Montserrat-Bold"), url(./assets/fonts/Montserrat-ExtraBold.woff) format("woff");
 }
