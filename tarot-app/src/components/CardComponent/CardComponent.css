@@ -1,0 +1,21 @@
+.card-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+}
+
+.card-image {
+    width: 180px;
+    height: 270px;
+}
+
+.card-title {
+    color: #434958;
+    font-family: "PT Sans", sans-serif;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 22px;
+    padding-top: 8px;
+}

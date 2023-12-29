@@ -1,0 +1,10 @@
+.cards {
+    width: 100%;
+}
+
+.cards-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}

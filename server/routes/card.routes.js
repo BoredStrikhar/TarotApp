@@ -4,6 +4,7 @@ const router = new Router()
 
 router.post("/card", cardController.createCard);
 router.get("/card", cardController.getCards);
+router.get("/card/suit", cardController.getOneCardBySuit);
 router.get("/card/:id", cardController.getOneCard);
 router.put("/card/:id", cardController.updateCard);
 router.delete("/card/:id", cardController.deleteCard);

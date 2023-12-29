@@ -1,10 +1,11 @@
 import React from "react";
-import store from "./redux/store";
+import {store} from "./redux/store";
 import { Provider } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import { Counter } from "./components/Counter/Counter";
 import { MainPage } from "./components/MainPage/MainPage";
+import { CardsPage } from "./components/CardsPage/CardsPage";
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<MainPage />} />
+            <Route path="/cards" element={<CardsPage />} />
+
             <Route path="/gadanie" element={<Counter />} />
           </Routes>
         </BrowserRouter>

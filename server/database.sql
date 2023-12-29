@@ -2,6 +2,7 @@ create TABLE cards (
     id SERIAL PRIMARY KEY,
     name text,
     arcana text,
+    suit_en text,
     suit text,
     yes_or_no text,
     image_link text,
@@ -22,3 +23,5 @@ create TABLE cards (
     health_inverted_meaning text,
     health_inverted_meaning_tags text
 );
+
+ALTER TABLE cards ADD suit_en text;

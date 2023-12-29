@@ -11,7 +11,7 @@ export function Header() {
   return (
     <div className="header">
       <div className="wrapper">
-        <a className="header-item" href="http://google.com">
+        <a className="header-item" href="/">
           <TarotLogo className="logo" />
         </a>
         <a className="header-item" href="/gadanie">
@@ -20,7 +20,7 @@ export function Header() {
         <a className="header-item" href="http://google.com">
           <span>Викторина</span>
         </a>
-        <a className="header-item" href="http://google.com">
+        <a className="header-item" href="/cards">
           <span>Значения</span>
         </a>
         <a className="header-item" href="http://google.com">
