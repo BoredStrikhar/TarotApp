@@ -4,6 +4,7 @@ import React from "react";
 
 type Card = {
   name: string;
+  name_en: string;
   image_link: string;
 };
 
@@ -15,7 +16,9 @@ export function CardsList(CardListProps: CardsListProps) {
  return (
    <div className="cards-list-wrapper">
      {CardListProps.cards.map((card) => (
-       <CardComponent name={card.name} image_link={card.image_link} />
+       <CardComponent name={card.name} 
+       name_en={card.name_en}
+       image_link={card.image_link} />
      ))}
    </div>
  );

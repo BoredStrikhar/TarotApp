@@ -1,0 +1,39 @@
+.divination {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.divination-item {
+    margin-top: 36px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #FFCC99;
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divination-item-left {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+}
+
+.divination-item-title {
+    color: black;
+    font-size: 24px;
+}
+
+.divination-item-description {
+    color: black;
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+.arrow-logo {
+    width: 32px;
+    height: 32px;
+}

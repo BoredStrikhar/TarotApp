@@ -7,3 +7,7 @@
     font-family: "Montserrat-Bold";
     src: local("Montserrat-Bold"), url(./assets/fonts/Montserrat-ExtraBold.woff) format("woff");
 }
+
+a {
+    text-decoration: none;
+}

@@ -3,6 +3,7 @@ create TABLE cards (
     name text,
     arcana text,
     suit_en text,
+    name_en text,
     suit text,
     yes_or_no text,
     image_link text,
@@ -25,3 +26,4 @@ create TABLE cards (
 );
 
 ALTER TABLE cards ADD suit_en text;
+ALTER TABLE cards ADD name_en text;

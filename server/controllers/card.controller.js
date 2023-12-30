@@ -1,4 +1,4 @@
-const db = require('../db')
+const db = require("../db");
 
 class CardController {
     async createCard(req, res) {
@@ -25,6 +25,7 @@ class CardController {
             health_inverted_meaning,
             health_inverted_meaning_tags,
             suit_en,
+            name_en,
         } = req.body;
         const newCard = await db.query(
             `INSERT INTO cards (name,
@@ -47,7 +48,7 @@ class CardController {
             health_direct_meaning,
             health_direct_meaning_tags,
             health_inverted_meaning,
-            health_inverted_meaning_tags, suit_en) values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22) RETURNING *`, [
+            health_inverted_meaning_tags, suit_en, name_en) values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23) RETURNING *`, [
                 name,
                 arcana,
                 suit,
@@ -70,6 +71,7 @@ class CardController {
                 health_inverted_meaning,
                 health_inverted_meaning_tags,
                 suit_en,
+                name_en,
             ]
         );
         res.json(newCard.rows[0]);
@@ -83,11 +85,22 @@ class CardController {
         const cards = await db.query("SELECT * FROM cards where id = $1", [id]);
         res.json(cards.rows[0]);
     }
-    async getOneCardBySuit(req, res) {
-        const suit_en = req.query.suit_en;
-        const cards = await db.query("SELECT * FROM cards where suit_en = $1 ORDER BY id", [
-            suit_en,
+    async getRandomCard(req, res) {
+        const cards = await db.query("SELECT * FROM cards ORDER BY RANDOM() LIMIT 1");
+        res.json(cards.rows);
+    }
+    async getOneCardByName(req, res) {
+        const name_en = req.query.name_en;
+        const cards = await db.query("SELECT * FROM cards where name_en = $1", [
+            name_en,
         ]);
+        res.json(cards.rows[0]);
+    }
+    async getCardsBySuit(req, res) {
+        const suit_en = req.query.suit_en;
+        const cards = await db.query(
+            "SELECT * FROM cards where suit_en = $1 ORDER BY id", [suit_en]
+        );
         res.json(cards.rows);
     }
     async updateCard(req, res) {
@@ -115,9 +128,10 @@ class CardController {
             health_inverted_meaning,
             health_inverted_meaning_tags,
             suit_en,
+            name_en,
         } = req.body;
         const cards = await db.query(
-            "UPDATE cards set name = $1, arcana = $2, suit = $3, yes_or_no = $4, image_link = $5, common_direct_meaning = $6, common_direct_meaning_tags = $7, common_inverted_meaning = $8, common_inverted_meaning_tags = $9, love_direct_meaning = $10, love_direct_meaning_tags = $11, love_inverted_meaning = $12, love_inverted_meaning_tags = $13, career_direct_meaning = $14, career_direct_meaning_tags = $15, career_inverted_meaning = $16, career_inverted_meaning_tags = $17, health_direct_meaning = $18, health_direct_meaning_tags = $19, health_inverted_meaning = $20, health_inverted_meaning_tags = $21, suit_en = $22 where id = $23 RETURNING * ", [
+            "UPDATE cards set name = $1, arcana = $2, suit = $3, yes_or_no = $4, image_link = $5, common_direct_meaning = $6, common_direct_meaning_tags = $7, common_inverted_meaning = $8, common_inverted_meaning_tags = $9, love_direct_meaning = $10, love_direct_meaning_tags = $11, love_inverted_meaning = $12, love_inverted_meaning_tags = $13, career_direct_meaning = $14, career_direct_meaning_tags = $15, career_inverted_meaning = $16, career_inverted_meaning_tags = $17, health_direct_meaning = $18, health_direct_meaning_tags = $19, health_inverted_meaning = $20, health_inverted_meaning_tags = $21, suit_en = $22, name_en = $23 where id = $24 RETURNING * ", [
                 name,
                 arcana,
                 suit,
@@ -140,6 +154,7 @@ class CardController {
                 health_inverted_meaning,
                 health_inverted_meaning_tags,
                 suit_en,
+                name_en,
                 id,
             ]
         );
@@ -152,4 +167,4 @@ class CardController {
     }
 }
 
-module.exports = new CardController()
+module.exports = new CardController();

@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
-type Suit = "arcana" | "wands" | "swords" | "cups" | "pentacles"
+type Suit = "arcana" | "wands" | "swords" | "cups" | "pents"
 type SuitStore = {suit: Suit}
 
 export const suitsSlice = createSlice({

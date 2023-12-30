@@ -1,6 +1,6 @@
-.cards-list-wrapper {
+.tags {
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
+    padding-top: 10px;
     flex-wrap: wrap;
 }

@@ -5,6 +5,7 @@ import { CardsList } from "../CardList/CardsList";
 
 type Card = {
   name: string;
+  name_en: string;
   image_link: string;
 };
 

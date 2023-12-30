@@ -41,7 +41,7 @@ export function SuitsWrapper() {
         </button>
         <button
           className="suit-item"
-          onClick={() => dispatch(setSuit("pentacles"))}
+          onClick={() => dispatch(setSuit("pents"))}
         >
           <PentacleLogo className="suit-logo" />
           <span>Пентакли</span>
