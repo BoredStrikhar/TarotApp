@@ -1,0 +1,43 @@
+.day-card-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.additional-info {
+    text-align: center;
+    max-width: 900px;
+    display: none;
+}
+
+.additional-info-active {
+    display: block;
+}
+
+.additional-info-span {
+    font-family: "PT Sans", sans-serif;
+    font-size: 20px;
+}
+
+.a-button {
+    background-color: #087ea4;
+    text-decoration: none;
+    color: #fbfbfb;
+    font-family: "PT Sans", sans-serif;
+    font-size: 20px;
+    padding: 16px;
+    border-radius: 14px;
+    margin-top: 20px;
+}
+
+.day-card-title {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.div-one {
+    margin-top: 30px;
+}

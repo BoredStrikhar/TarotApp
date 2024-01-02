@@ -1,25 +1,45 @@
-.divination {
+.divination-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.divination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 40%;
+    position: relative;
+    flex-direction: column;
 }
 
 .divination-item {
     margin-top: 36px;
     padding: 20px;
     border-radius: 20px;
-    background-color: #FFCC99;
-    max-width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
-.divination-item-left {
+.divination-item-inner-wrapper {
     display: flex;
     flex-direction: column;
     width: 85%;
+}
+
+.divination-item-additional {
+    border-radius: 0px 0px 20px 20px;
+    margin-top: -16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ececec;
+    width: 100%;
+    padding: 40px 20px 20px 20px;
+    z-index: -1;
 }
 
 .divination-item-title {

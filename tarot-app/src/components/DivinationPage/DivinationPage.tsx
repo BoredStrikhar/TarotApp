@@ -9,6 +9,7 @@ export function DivinationPage() {
       description:
         "Просто ахуенно Просто ахуенно Просто ахуенно Просто ахуенно Просто ахуенно Просто ахуенно Просто ахуенно Просто ахуенно Просто ахуенно Просто ахуенно ",
       href: "/gadanie/karta-dnya",
+      types: ["none"],
     },
     {
       id: 2,
@@ -16,6 +17,7 @@ export function DivinationPage() {
       description:
         "Ну Просто ахуенно Просто ахуенно Просто ахуенно Просто ахуенно Просто ахуенно Просто ахуенно Просто ахуенно Просто ахуенно Просто ахуенно Просто ахуенно ",
       href: "/gadanie/proshloe-nastoyaschee-buduschee",
+      types: ["Общее", "На любовь", "На карьеру", "На здоровье"],
     },
     {
       id: 3,
@@ -23,6 +25,7 @@ export function DivinationPage() {
       description:
         "Пиздец Просто ахуенно Просто ахуенно Просто ахуенно Просто ахуенно Просто ахуенно Просто ахуенно Просто ахуенно Просто ахуенно Просто ахуенно Просто ахуенно ",
       href: "/gadanie/love",
+      types: ["none"],
     },
   ];
   return (
@@ -33,6 +36,7 @@ export function DivinationPage() {
           description={e.description}
           href={e.href}
           id={id}
+          types={e.types}
         />
       ))}
     </div>
