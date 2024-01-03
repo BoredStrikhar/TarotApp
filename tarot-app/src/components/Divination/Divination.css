@@ -1,59 +1,66 @@
-.divination-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.divination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 40%;
-    position: relative;
-    flex-direction: column;
-}
-
-.divination-item {
-    margin-top: 36px;
-    padding: 20px;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.divination-item-inner-wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 85%;
-}
-
-.divination-item-additional {
-    border-radius: 0px 0px 20px 20px;
-    margin-top: -16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #ececec;
-    width: 100%;
-    padding: 40px 20px 20px 20px;
-    z-index: -1;
-}
-
-.divination-item-title {
-    color: black;
-    font-size: 24px;
-}
-
-.divination-item-description {
-    color: black;
-    font-size: 18px;
-    margin-top: 8px;
-}
-
-.arrow-logo {
-    width: 32px;
-    height: 32px;
-}
+    .divination-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .divination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 40%;
+        position: relative;
+        flex-direction: column;
+    }
+    
+    .divination-item {
+        margin-top: 36px;
+        padding: 20px;
+        border-radius: 20px 20px 0px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .divination-item-single {
+        border-radius: 20px;
+    }
+    
+    .divination-item-inner-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+    }
+    
+    .divination-item-additional {
+        border-radius: 0px 0px 20px 20px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        background: #ececec;
+        width: 100%;
+        padding: 20px 20px 20px 20px;
+        transition: transition 3s;
+    }
+    
+    .open {
+        display: none;
+    }
+    
+    .divination-item-title {
+        color: black;
+        font-size: 24px;
+    }
+    
+    .divination-item-description {
+        color: black;
+        font-size: 18px;
+        margin-top: 8px;
+    }
+    
+    .arrow-logo {
+        width: 32px;
+        height: 32px;
+    }

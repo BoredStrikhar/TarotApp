@@ -8,6 +8,7 @@ import { CardsPage } from "./components/CardsPage/CardsPage";
 import { SingleCardPage } from "./components/SingleCardPage/SingleCardPage";
 import { DivinationPage } from "./components/DivinationPage/DivinationPage";
 import { DayCardPage } from "./components/DayCardPage/DayCardPage";
+import { PPFPage } from "./components/PPFPage/PPFPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/cards/:name_en" element={<SingleCardPage />} />
             <Route path="/gadanie" element={<DivinationPage />} />
             <Route path="/gadanie/karta-dnya" element={<DayCardPage />} />
+            <Route path="/gadanie/past-present-future/"  element={<PPFPage />}/>
           </Routes>
         </BrowserRouter>
       </Provider>

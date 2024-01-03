@@ -4,7 +4,7 @@ type DivinationType = "common" | "health" | "love" | "career";
 type DivinationStore = { divination: DivinationType };
 
 export const divinationsSlice = createSlice({
-  name: "suit",
+  name: "divination",
   initialState: {
     divination: "common",
   } as DivinationStore,

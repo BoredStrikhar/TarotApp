@@ -1,7 +1,7 @@
 import "./Divination.css";
 import { ReactComponent as Arrow } from "../../assets/pictures/arrow-right.svg";
 import { useState } from "react";
-import { DivinationType } from "../DivinationType/DivinationType";
+import { DivinationButton } from "../DivinationButton/DivinationButton";
 
 type DivinationProps = {
   name: string;
@@ -24,6 +24,8 @@ export function Divination(props: DivinationProps) {
     backgroundColor = "#99CCFF";
   }
   const [isPanelOpen, setIsPanelOpen] = useState(false);
+    const [isFlex, setIsFlex] = useState("none");
+
   const togglePanel = () => {
     setIsPanelOpen(!isPanelOpen);
   };
@@ -32,7 +34,7 @@ export function Divination(props: DivinationProps) {
       <div className="divination">
         <a
           href={props.href}
-          className="divination-item"
+          className="divination-item divination-item-single"
           style={{ backgroundColor }}
         >
           <div className="divination-item-inner-wrapper">
@@ -49,7 +51,7 @@ export function Divination(props: DivinationProps) {
     return (
       <div className="divination">
         <div
-          className={`divination-item ${isPanelOpen ? "open" : ""}`}
+          className="divination-item"
           style={{ backgroundColor }}
           onClick={togglePanel}
         >
@@ -62,9 +64,14 @@ export function Divination(props: DivinationProps) {
           <Arrow className="arrow-logo"></Arrow>
         </div>
         {isPanelOpen && (
-          <div className="divination-item-additional">
+          <div
+            className={`divination-item-additional ${
+              isPanelOpen ? "open" : ""
+            }`}
+            style={{ display: isFlex ? "flex" : "none" }}
+          >
             {props.types.map((e, id) => (
-              <DivinationType name={e} id={id}></DivinationType>
+              <DivinationButton name={e} id={id}></DivinationButton>
             ))}
           </div>
         )}

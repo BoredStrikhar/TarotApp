@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { useAppDispatch } from "../../redux/hooks";
-import "./DivinationType.css";
+import "./DivinationButton.css";
 import { setDivinationType } from "../../redux/divinations/divinationsSlice";
 
-type DivinationTypeProps = {
+type DivinationButtonProps = {
   name: string;
   id: number;
 };
+type DivinationType = "common" | "health" | "love" | "career";
 
-export function DivinationType(props: DivinationTypeProps) {
+
+export function DivinationButton(props: DivinationButtonProps) {
   let backgroundColor: string;
   let myId = props.id % 4;
   if (myId % 4 === 0) {
@@ -20,22 +22,30 @@ export function DivinationType(props: DivinationTypeProps) {
   } else {
     backgroundColor = "#99CCFF";
   }
-  const link: string = "/past-present-future/";
-  let type: string = "common";
+  const link: string = "gadanie/past-present-future/";
+  let type: DivinationType = "common";
   const dispatch = useAppDispatch();
   if (props.name === "Общее") {
-    dispatch(setDivinationType("common"));
+    type = "common";
   } else if (props.name === "На любовь") {
-    dispatch(setDivinationType("love"));
+    type = "love";
   } else if (props.name === "На здоровье") {
-    dispatch(setDivinationType("health"));
+    type = "health";
   } else if (props.name === "На карьеру") {
-    dispatch(setDivinationType("career"));
+    type = "career";
   }
 
   return (
     <div className="divination-type">
-      <a href={link} className="a-divination-type" style={{ backgroundColor }}>
+      <a
+        href={link}
+        className="a-divination-type"
+        style={{ backgroundColor }}
+        onClick={() => {
+          dispatch(setDivinationType(type));
+          localStorage.setItem("divinationType", type);
+        }}
+      >
         {props.name}
       </a>
     </div>
