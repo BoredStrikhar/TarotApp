@@ -86,7 +86,10 @@ class CardController {
         res.json(cards.rows[0]);
     }
     async getRandomCard(req, res) {
-        const cards = await db.query("SELECT * FROM cards ORDER BY RANDOM() LIMIT 1");
+        const numOfCards = req.query.numOfCards;
+        const cards = await db.query(
+            "SELECT * FROM cards ORDER BY RANDOM() LIMIT $1", [numOfCards]
+        );
         res.json(cards.rows);
     }
     async getOneCardByName(req, res) {

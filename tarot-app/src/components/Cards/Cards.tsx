@@ -28,7 +28,7 @@ export function Cards() {
   }, [suit]);
 
   return (
-    <div className="cards">
+    <div className={styles["cards"]}>
       <div className={styles["cards-wrapper"]}>
         <CardsList cards={cards} />
       </div>

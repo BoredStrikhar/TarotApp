@@ -26,3 +26,11 @@
     width: 80px;
     height: 80px;
 }
+
+.cards-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}

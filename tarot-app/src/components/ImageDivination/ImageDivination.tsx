@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./ImageDivination.css";
 
-export function ImageDivination({link} : {link: string}) {
+export function ImageDivination({link, isInverted} : {link: string, isInverted: string}) {
   const [isFlipped, setIsFlipped] = useState(false);
   const cardbackLink =
     "https://raw.githubusercontent.com/BoredStrikhar/Tarot-Image/master/tarot-img/card-back.jpg";
@@ -10,12 +10,15 @@ export function ImageDivination({link} : {link: string}) {
     setIsFlipped(true);
   };
   return (
-    <div
-      className={`image-divination-wrapper ${isFlipped ? 'flipped' : ''}`}
-    >
+    <div className={`image-divination-wrapper ${isFlipped ? "flipped" : ""}`}>
       <div className="card">
         <img className="card-front" src={cardbackLink} onClick={handleClick} />
-        <img className="card-back" src={link} />
+        <img
+          className={`${
+            isInverted ? "card-back-inverted" : "card-back"
+          }`}
+          src={link}
+        />
       </div>
     </div>
   );
