@@ -45,20 +45,121 @@ export function SingleCardPage() {
   }, [name_en]);
   return (
     <div className="single-card-page">
-      <h1 className="card-title">{card?.name}</h1>
-      <div className="single-card-wrapper">
-        <img src={card?.image_link} className="card-image"></img>
-        <div className="card-info-wrapper">
-          <span className="card-info">Масть: {card?.suit}</span>
-          <span className="card-info">{card?.arcana}</span>
-          <span className="card-info">{card?.common_direct_meaning}</span>
-          <Tags card={card}></Tags>
+      <h1 className="single-page-card-title">{card?.name}</h1>
+      <div className="single-card">
+        <span className="single-page-card-subtitle">Обычное значение</span>
+        <div className="single-card-wrapper">
+          <img src={card?.image_link} className="card-image"></img>
+          <div className="card-info-wrapper">
+            <span className="card-info">Масть: {card?.suit}</span>
+            <span className="card-info">{card?.arcana}</span>
+            <span className="card-info">{card?.common_direct_meaning}</span>
+            <Tags cardTags={card?.common_direct_meaning_tags}></Tags>
+          </div>
         </div>
       </div>
-      <img
-        src={card?.image_link}
-        className="card-image inverted-card-image"
-      ></img>
+      <div className="single-card">
+        <span className="single-page-card-subtitle">Перевернутое значение</span>
+        <div className="single-card-wrapper">
+          <img
+            src={card?.image_link}
+            className="card-image inverted-card-image"
+          ></img>
+          <div className="card-info-wrapper">
+            <span className="card-info">Масть: {card?.suit}</span>
+            <span className="card-info">{card?.arcana}</span>
+            <span className="card-info">{card?.common_inverted_meaning}</span>
+            <Tags cardTags={card?.common_inverted_meaning_tags}></Tags>
+          </div>
+        </div>
+      </div>
+      <div className="single-card">
+        <span className="single-page-card-subtitle">Любовное значение</span>
+        <div className="single-card-wrapper">
+          <img src={card?.image_link} className="card-image"></img>
+          <div className="card-info-wrapper">
+            <span className="card-info">Масть: {card?.suit}</span>
+            <span className="card-info">{card?.arcana}</span>
+            <span className="card-info">{card?.love_direct_meaning}</span>
+            <Tags cardTags={card?.love_direct_meaning_tags}></Tags>
+          </div>
+        </div>
+      </div>
+      <div className="single-card">
+        <span className="single-page-card-subtitle">
+          Перевернутое любовное значение
+        </span>
+        <div className="single-card-wrapper">
+          <img
+            src={card?.image_link}
+            className="card-image inverted-card-image"
+          ></img>
+          <div className="card-info-wrapper">
+            <span className="card-info">Масть: {card?.suit}</span>
+            <span className="card-info">{card?.arcana}</span>
+            <span className="card-info">{card?.love_inverted_meaning}</span>
+            <Tags cardTags={card?.love_inverted_meaning_tags}></Tags>
+          </div>
+        </div>
+      </div>
+      <div className="single-card">
+        <span className="single-page-card-subtitle">Значение для карьеры</span>
+        <div className="single-card-wrapper">
+          <img src={card?.image_link} className="card-image"></img>
+          <div className="card-info-wrapper">
+            <span className="card-info">Масть: {card?.suit}</span>
+            <span className="card-info">{card?.arcana}</span>
+            <span className="card-info">{card?.career_direct_meaning}</span>
+            <Tags cardTags={card?.career_direct_meaning_tags}></Tags>
+          </div>
+        </div>
+      </div>
+      <div className="single-card">
+        <span className="single-page-card-subtitle">
+          Перевернутое значение для карьеры
+        </span>
+        <div className="single-card-wrapper">
+          <img
+            src={card?.image_link}
+            className="card-image inverted-card-image"
+          ></img>
+          <div className="card-info-wrapper">
+            <span className="card-info">Масть: {card?.suit}</span>
+            <span className="card-info">{card?.arcana}</span>
+            <span className="card-info">{card?.career_inverted_meaning}</span>
+            <Tags cardTags={card?.career_inverted_meaning_tags}></Tags>
+          </div>
+        </div>
+      </div>
+      <div className="single-card">
+        <span className="single-page-card-subtitle">Значение для здоровья</span>
+        <div className="single-card-wrapper">
+          <img src={card?.image_link} className="card-image"></img>
+          <div className="card-info-wrapper">
+            <span className="card-info">Масть: {card?.suit}</span>
+            <span className="card-info">{card?.arcana}</span>
+            <span className="card-info">{card?.health_direct_meaning}</span>
+            <Tags cardTags={card?.health_direct_meaning_tags}></Tags>
+          </div>
+        </div>
+      </div>
+      <div className="single-card">
+        <span className="single-page-card-subtitle">
+          Перевернутое значение для здоровья
+        </span>
+        <div className="single-card-wrapper">
+          <img
+            src={card?.image_link}
+            className="card-image inverted-card-image"
+          ></img>
+          <div className="card-info-wrapper">
+            <span className="card-info">Масть: {card?.suit}</span>
+            <span className="card-info">{card?.arcana}</span>
+            <span className="card-info">{card?.health_inverted_meaning}</span>
+            <Tags cardTags={card?.health_inverted_meaning_tags}></Tags>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

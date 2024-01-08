@@ -23,7 +23,7 @@ export function Header() {
         <a className="header-item" href="/cards">
           <span>Значения</span>
         </a>
-        <a className="header-item" href="http://google.com">
+        <a className="header-item" href="/courses">
           <span>Курсы</span>
         </a>
       </div>
